@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | ArborGlow</title>
+    <style>
+        :root {
+            --dark-green: #0a2e0a;
+            --forest-green: #1a4d1a;
+            --glow-green: #5eff5e;
+            --light-green: #8bc34a;
+            --gold: #ffd700;
+            --cream: #fffdd0;
+            --dark-brown: #5d4037;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-green);
+            color: var(--cream);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(10, 46, 10, 0.9), rgba(10, 46, 10, 0.7)), url('https://images.unsplash.com/photo-1476231682824-37e9bc0d0d4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50,0 L60,40 L100,50 L60,60 L50,100 L40,60 L0,50 L40,40 Z" fill="none" stroke="%235eff5e" stroke-width="0.5"/></svg>');
+            background-size: 100px 100px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: var(--glow-green);
+            text-shadow: 0 0 10px var(--glow-green);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 46, 10, 0.9);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--glow-green);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--glow-green);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glow-green), transparent);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--glow-green);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--light-green);
+            margin: 30px 0 20px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--glow-green);
+            margin: 25px 0 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: var(--forest-green);
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-column h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--glow-green);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 253, 208, 0.1);
+            border-radius: 50%;
+            margin: 0 10px;
+            color: var(--cream);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--glow-green);
+            color: var(--dark-green);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(94, 255, 94, 0.2);
+            color: var(--light-green);
+            font-size: 0.9rem;
+        }
+
+        .terms-section {
+            background-color: rgba(26, 77, 26, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border-left: 5px solid var(--glow-green);
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .container {
+                padding: 60px 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li ><a href="index.html" tabindex="0">Home</a></li>
+         <li ><a href="privacy.html" tabindex="0">Privacy</a></li>
+         <li ><a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a></li>
+         <li ><a href="cookies.html"tabindex="0">Cookies</a></li>
+         <li ><a href="contact.html" tabindex="0">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="logo">Arbor<span>Glow</span></h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h1>Terms of Service</h1>
+            <p>Last Updated: June 1, 2023</p>
+            
+            <div class="terms-section">
+                <p>Welcome to ArborGlow! These Terms of Service ("Terms") govern your access to and use of our website and tree care services. Please read these Terms carefully before using our services. By accessing or using our services, you agree to be bound by these Terms and our Privacy Policy.</p>
+                <p>If you do not agree to all of these Terms, you may not access or use our services. These Terms apply to all visitors, users, and others who access or use our services.</p>
+            </div>
+            
+            <h2>1. Service Overview</h2>
+            <p>ArborGlow provides professional tree care services including but not limited to:</p>
+            <ul>
+                <li>Tree health assessments and diagnostics</li>
+                <li>Pruning and structural maintenance</li>
+                <li>Disease and pest management</li>
+                <li>Tree removal and stump grinding</li>
+                <li>Emergency tree services</li>
+                <li>Consulting and arborist reports</li>
+            </ul>
+            
+            <div class="terms-section">
+                <h3>1.1 Service Limitations</h3>
+                <p>Our services are subject to the following limitations:</p>
+                <ul>
+                    <li>Services are provided only within our designated service areas</li>
+                    <li>Certain services may require permits or approvals from local authorities</li>
+                    <li>We reserve the right to refuse service if conditions are unsafe or if the requested work would violate industry standards</li>
+                    <li>Some services may be weather-dependent or subject to seasonal availability</li>
+                </ul>
+            </div>
+            
+            <h2>2. Account Registration</h2>
+            <p>To access certain features of our services, you may be required to create an account. When registering, you agree to:</p>
+            
+            <h3>2.1 Account Requirements</h3>
+            <ul>
+                <li>Provide accurate, current, and complete information</li>
+                <li>Maintain and promptly update your account information</li>
+                <li>Maintain the security of your account credentials</li>
+                <li>Accept responsibility for all activities that occur under your account</li>
+                <li>Notify us immediately of any unauthorized use of your account</li>
+            </ul>
+            
+            <h3>2.2 Account Termination</h3>
+            <p>We reserve the right to suspend or terminate your account at any time if we believe you have violated these Terms or applicable laws, or for any other reason at our sole discretion.</p>
+            
+            <h2>3. Service Agreements</h2>
+            <p>When you engage ArborGlow for tree care services, the following terms apply:</p>
+            
+            <div class="terms-section">
+                <h3>3.1 Estimates and Pricing</h3>
+                <ul>
+                    <li>Written estimates are valid for 30 days from date of issue</li>
+                    <li>Prices are subject to change if the scope of work changes</li>
+                    <li>Additional charges may apply for unforeseen complications</li>
+                    <li>Payment is due upon completion of services unless otherwise agreed</li>
+                </ul>
+                
+                <h3>3.2 Scheduling and Cancellations</h3>
+                <ul>
+                    <li>We require 48 hours notice for cancellations or rescheduling</li>
+                    <li>Late cancellations may be subject to a cancellation fee</li>
+                    <li>We reserve the right to reschedule due to weather or safety concerns</li>
+                </ul>
+            </div>
+            
+            <h2>4. Payment Terms</h2>
+            <p>All payments for services rendered are subject to the following terms:</p>
+            
+            <h3>4.1 Payment Methods</h3>
+            <p>We accept the following payment methods:</p>
+            <ul>
+                <li>Credit/debit cards (Visa, MasterCard, American Express)</li>
+                <li>Bank transfers</li>
+                <li>Checks (subject to clearance)</li>
+                <li>Cash (for amounts under $1,000)</li>
+            </ul>
+            
+            <h3>4.2 Late Payments</h3>
+            <p>Accounts not paid within 30 days of invoice date will be subject to:</p>
+            <ul>
+                <li>A late fee of 1.5% per month (18% annually) on the outstanding balance</li>
+                <li>Suspension of future services until payment is received</li>
+                <li>Possible referral to a collection agency</li>
+            </ul>
+            
+            <h2>5. Property Access and Conditions</h2>
+            <p>When providing services at your property, the following conditions apply:</p>
+            
+            <h3>5.1 Property Preparation</h3>
+            <ul>
+                <li>You must provide clear access to all work areas</li>
+                <li>Pets must be secured during our work</li>
+                <li>Underground utilities must be marked prior to service</li>
+                <li>You must disclose any known hazards or special conditions</li>
+            </ul>
+            
+            <h3>5.2 Property Damage</h3>
+            <p>While we take every precaution to prevent damage, tree work inherently involves risks. We are not responsible for:</p>
+            <ul>
+                <li>Damage to underground utilities not properly marked</li>
+                <li>Damage to unhealthy or compromised trees adjacent to work areas</li>
+                <li>Minor lawn damage from equipment, which typically recovers within weeks</li>
+            </ul>
+            
+            <h2>6. Tree Ownership and Permissions</h2>
+            <p>By requesting services, you represent and warrant that:</p>
+            
+            <div class="terms-section">
+                <h3>6.1 Ownership and Authority</h3>
+                <ul>
+                    <li>You own the tree(s) to be serviced or have obtained necessary permissions</li>
+                    <li>You have obtained any required permits or approvals</li>
+                    <li>The work will not violate any local ordinances or HOA regulations</li>
+                </ul>
+                
+                <h3>6.2 Boundary Trees</h3>
+                <p>For trees located on property lines, you must provide written consent from the adjacent property owner or evidence of sole responsibility for the tree.</p>
+            </div>
+            
+            <h2>7. Safety and Insurance</h2>
+            <p>ArborGlow maintains strict safety protocols and comprehensive insurance coverage:</p>
+            
+            <h3>7.1 Safety Standards</h3>
+            <ul>
+                <li>All work performed according to ANSI Z133 safety standards</li>
+                <li>Our crew members are trained in first aid and emergency procedures</li>
+                <li>We reserve the right to postpone work due to unsafe conditions</li>
+            </ul>
+            
+            <h3>7.2 Insurance Coverage</h3>
+            <ul>
+                <li>We maintain $2,000,000 in general liability insurance</li>
+                <li>Workers' compensation coverage for all employees</li>
+                <li>Certificates of insurance available upon request</li>
+            </ul>
+            
+            <h2>8. Guarantees and Warranties</h2>
+            <p>ArborGlow stands behind our work with the following guarantees:</p>
+            
+            <div class="terms-section">
+                <h3>8.1 Workmanship Guarantee</h3>
+                <p>We guarantee all work performed for 1 year against defects in workmanship. This guarantee covers:</p>
+                <ul>
+                    <li>Proper execution of pruning cuts</li>
+                    <li>Structural integrity of supported trees</li>
+                    <li>Completeness of removals and stump grinding</li>
+                </ul>
+                
+                <h3>8.2 Treatment Guarantees</h3>
+                <p>Specific treatments may carry their own guarantees as outlined in your service agreement. Most treatment guarantees require:</p>
+                <ul>
+                    <li>Proper application by our certified technicians</li>
+                    <li>Follow-up applications as recommended</li>
+                    <li>Proper cultural practices by the property owner</li>
+                </ul>
+            </div>
+            
+            <h2>9. Limitations of Liability</h2>
+            <p>To the fullest extent permitted by law, ArborGlow's liability is limited as follows:</p>
+            
+            <h3>9.1 General Limitations</h3>
+            <ul>
+                <li>We are not liable for pre-existing tree conditions or natural tree failures</li>
+                <li>Our liability for any claim is limited to the amount paid for the service in question</li>
+                <li>We are not liable for consequential, incidental, or special damages</li>
+            </ul>
+            
+            <h3>9.2 Force Majeure</h3>
+            <p>We are not liable for delays or failures in performance resulting from acts beyond our reasonable control, including:</p>
+            <ul>
+                <li>Natural disasters</li>
+                <li>Government actions</li>
+                <li>Labor disputes</li>
+                <li>Utility failures</li>
+            </ul>
+            
+            <h2>10. Intellectual Property</h2>
+            <p>All content and materials provided through our services are protected by intellectual property laws:</p>
+            
+            <h3>10.1 Ownership</h3>
+            <ul>
+                <li>We retain all rights to our proprietary methods and materials</li>
+                <li>Diagnostic reports and assessments are for client use only</li>
+                <li>Photographs taken during service may be used for our portfolio unless otherwise agreed</li>
+            </ul>
+            
+            <h3>10.2 Restrictions</h3>
+            <p>You may not:</p>
+            <ul>
+                <li>Reproduce, modify, or distribute our proprietary materials</li>
+                <li>Use our name or logo without written permission</li>
+                <li>Reverse engineer or copy our diagnostic methods</li>
+            </ul>
+            
+            <h2>11. Dispute Resolution</h2>
+            <p>Any disputes arising from these Terms or our services will be resolved as follows:</p>
+            
+            <div class="terms-section">
+                <h3>11.1 Negotiation</h3>
+                <p>Parties agree to attempt to resolve disputes through good faith negotiation before pursuing other remedies.</p>
+                
+                <h3>11.2 Mediation</h3>
+                <p>If negotiation fails, parties agree to non-binding mediation with a mutually acceptable mediator before filing any lawsuit.</p>
+                
+                <h3>11.3 Governing Law</h3>
+                <p>These Terms shall be governed by the laws of the State of New York without regard to conflict of law provisions.</p>
+            </div>
+            
+            <h2>12. Changes to Terms</h2>
+            <p>We may modify these Terms at any time. When we do, we will revise the "Last Updated" date at the top of this page.</p>
+            
+            <h3>12.1 Notification</h3>
+            <p>For material changes that affect your rights, we will attempt to notify you through:</p>
+            <ul>
+                <li>Email to the address associated with your account</li>
+                <li>A notice on our website</li>
+                <li>Other communication methods as appropriate</li>
+            </ul>
+            
+            <h3>12.2 Continued Use</h3>
+            <p>Your continued use of our services after changes become effective constitutes acceptance of the revised Terms.</p>
+            
+            <h2>13. Termination</h2>
+            <p>These Terms remain in effect while you use our services. We may terminate or suspend your access to services:</p>
+            
+            <h3>13.1 By ArborGlow</h3>
+            <ul>
+                <li>For violation of these Terms</li>
+                <li>For non-payment of services</li>
+                <li>For safety concerns</li>
+                <li>At our sole discretion, with or without cause</li>
+            </ul>
+            
+            <h3>13.2 By You</h3>
+            <p>You may stop using our services at any time, subject to:</p>
+            <ul>
+                <li>Completion of any active service agreements</li>
+                <li>Payment of any outstanding balances</li>
+            </ul>
+            
+            <h2>14. General Provisions</h2>
+            <p>The following general provisions apply to these Terms:</p>
+            
+            <div class="terms-section">
+                <h3>14.1 Entire Agreement</h3>
+                <p>These Terms, together with any service agreements and our Privacy Policy, constitute the entire agreement between you and ArborGlow regarding our services.</p>
+                
+                <h3>14.2 Severability</h3>
+                <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full force and effect.</p>
+                
+                <h3>14.3 Waiver</h3>
+                <p>Our failure to enforce any right or provision will not be considered a waiver of those rights.</p>
+                
+                <h3>14.4 Assignment</h3>
+                <p>You may not assign or transfer these Terms without our prior written consent. We may assign these Terms without restriction.</p>
+            </div>
+            
+            <h2>15. Tree-Specific Provisions</h2>
+            <p>The following provisions apply specifically to tree care services:</p>
+            
+            <h3>15.1 Tree Risk</h3>
+            <p>You acknowledge that tree work involves inherent risks including but not limited to:</p>
+            <ul>
+                <li>Falling branches or trees</li>
+                <li>Unpredictable tree failures</li>
+                <li>Hidden defects or decay</li>
+                <li>Reaction of nearby trees to changes in light and wind patterns</li>
+            </ul>
+            
+            <h3>15.2 Aftercare Requirements</h3>
+            <p>To maintain tree health after our services, you agree to:</p>
+            <ul>
+                <li>Follow our recommended watering and fertilization schedule</li>
+                <li>Monitor for signs of stress or disease</li>
+                <li>Protect root zones from compaction or excavation</li>
+                <li>Schedule follow-up assessments as recommended</li>
+            </ul>
+            
+            <h2>16. Emergency Services</h2>
+            <p>Emergency tree services are subject to additional terms:</p>
+            
+            <div class="terms-section">
+                <h3>16.1 Response Time</h3>
+                <p>We prioritize emergency calls but cannot guarantee specific response times due to:</p>
+                <ul>
+                    <li>Volume of emergencies during storm events</li>
+                    <li>Travel conditions</li>
+                    <li>Safety considerations</li>
+                </ul>
+                
+                <h3>16.2 Emergency Pricing</h3>
+                <p>Emergency services are billed at 1.5 times our standard rates, with a 2-hour minimum charge.</p>
+                
+                <h3>16.3 Limited Scope</h3>
+                <p>Emergency services focus on making the situation safe. Additional cleanup or finishing work may be required later.</p>
+            </div>
+            
+            <h2>17. Stump Grinding and Removal</h2>
+            <p>Stump grinding services include the following provisions:</p>
+            
+            <h3>17.1 Depth of Grinding</h3>
+            <ul>
+                <li>Standard grinding removes the stump 4-6 inches below grade</li>
+                <li>Surface roots within 2 feet of the stump are typically ground</li>
+                <li>Deeper grinding available for additional charge</li>
+            </ul>
+            
+            <h3>17.2 Debris Management</h3>
+            <ul>
+                <li>Grindings may be left on site as mulch unless otherwise requested</li>
+                <li>Removal of grindings available for additional charge</li>
+                <li>We do not remove large root systems extending beyond the stump area</li>
+            </ul>
+            
+            <h2>18. Plant Health Care</h2>
+            <p>Our plant health care services are subject to these additional terms:</p>
+            
+            <h3>18.1 Treatment Effectiveness</h3>
+            <p>While we use industry-best practices, treatment outcomes depend on:</p>
+            <ul>
+                <li>Tree species and condition</li>
+                <li>Environmental factors</li>
+                <li>Proper application timing</li>
+                <li>Follow-up care</li>
+            </ul>
+            
+            <h3>18.2 Organic Options</h3>
+            <p>We offer organic treatment alternatives with the following understanding:</p>
+            <ul>
+                <li>Organic treatments may require more frequent applications</li>
+                <li>Results may take longer to become apparent</li>
+                <li>Some conditions may not respond adequately to organic treatments alone</li>
+            </ul>
+            
+            <h2>19. Consulting Services</h2>
+            <p>Arborist consultations and reports include these provisions:</p>
+            
+            <div class="terms-section">
+                <h3>19.1 Report Usage</h3>
+                <p>Consulting reports are valid for the specific purpose and time stated in the report and may not be:</p>
+                <ul>
+                    <li>Used for purposes other than those originally intended</li>
+                    <li>Relied upon after the stated validity period</li>
+                    <li>Reproduced or distributed without our written consent</li>
+                </ul>
+                
+                <h3>19.2 Limitations</h3>
+                <p>Our consulting services are limited to:</p>
+                <ul>
+                    <li>Visual assessments unless otherwise specified</li>
+                    <li>Conditions present at the time of inspection</li>
+                    <li>Professional opinions based on available information</li>
+                </ul>
+            </div>
+            
+            <h2>20. Contact Information</h2>
+            <p>For questions about these Terms or our services, please contact us:</p>
+            <ul>
+                <li><strong>By email:</strong> legal@arborglow.com</li>
+                <li><strong>By phone:</strong> +1 (212) 555-1234</li>
+                <li><strong>By mail:</strong> 238 1st Ave, New York, NY 10009, USA</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="index.html#services">Tree Health Assessment</a></li>
+                    <li><a href="index.html#services">Professional Pruning</a></li>
+                    <li><a href="index.html#services">Disease Management</a></li>
+                    <li><a href="index.html#services">Emergency Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 238 1st Ave, New York, NY 10009, USA</li>
+                    <li><i class="fas fa-phone"></i> +1 (212) 555-1234</li>
+                    <li><i class="fas fa-envelope"></i> info@arborglow.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="#">Licenses & Certifications</a></li>
+                    <li><a href="#">Insurance Information</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2023 ArborGlow Professional Tree Care. All rights reserved. | ISA Certified Arborists | TCIA Accredited Business
+        </div>
+    </footer>
+</body>
+</html>

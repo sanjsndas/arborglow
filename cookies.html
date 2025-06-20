@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | ArborGlow</title>
+    <style>
+        :root {
+            --dark-green: #0a2e0a;
+            --forest-green: #1a4d1a;
+            --glow-green: #5eff5e;
+            --light-green: #8bc34a;
+            --gold: #ffd700;
+            --cream: #fffdd0;
+            --dark-brown: #5d4037;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-green);
+            color: var(--cream);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(10, 46, 10, 0.9), rgba(10, 46, 10, 0.7)), url('https://images.unsplash.com/photo-1476231682824-37e9bc0d0d4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50,0 L60,40 L100,50 L60,60 L50,100 L40,60 L0,50 L40,40 Z" fill="none" stroke="%235eff5e" stroke-width="0.5"/></svg>');
+            background-size: 100px 100px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .logo {
+            font-size: 3rem;
+            color: var(--glow-green);
+            text-shadow: 0 0 10px var(--glow-green);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 46, 10, 0.9);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--glow-green);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--glow-green);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glow-green), transparent);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--glow-green);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--light-green);
+            margin: 30px 0 20px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--glow-green);
+            margin: 25px 0 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: var(--forest-green);
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-column h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--glow-green);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 253, 208, 0.1);
+            border-radius: 50%;
+            margin: 0 10px;
+            color: var(--cream);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--glow-green);
+            color: var(--dark-green);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(94, 255, 94, 0.2);
+            color: var(--light-green);
+            font-size: 0.9rem;
+        }
+
+        .policy-section {
+            background-color: rgba(26, 77, 26, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border-left: 5px solid var(--glow-green);
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .cookie-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .cookie-card {
+            background-color: rgba(26, 77, 26, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(94, 255, 94, 0.2);
+        }
+
+        .cookie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(94, 255, 94, 0.3);
+        }
+
+        .cookie-icon {
+            font-size: 3rem;
+            color: var(--glow-green);
+            margin-bottom: 20px;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--forest-green);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border-top: 2px solid var(--glow-green);
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .cookie-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cookie-accept {
+            background-color: var(--glow-green);
+            color: var(--dark-green);
+            border: none;
+        }
+
+        .cookie-decline {
+            background-color: transparent;
+            color: var(--cream);
+            border: 1px solid var(--cream);
+        }
+
+        .cookie-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .container {
+                padding: 60px 15px;
+            }
+
+            .cookie-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+              <li ><a href="index.html" tabindex="0">Home</a></li>
+         <li ><a href="privacy.html" tabindex="0">Privacy</a></li>
+         <li ><a href="terms.html" tabindex="0">Terms & conditons</a></li>
+         <li ><a href="cookies.html"tabindex="0"aria-current="page">Cookies</a></li>
+         <li ><a href="contact.html" tabindex="0">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="logo">Arbor<span>Glow</span></h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h1>Cookie Policy</h1>
+            <p>Last Updated: June 1, 2023</p>
+            
+            <div class="policy-section">
+                <p>This Cookie Policy explains what cookies are, how ArborGlow uses them, your choices regarding cookies, and further information about the types of cookies we use. By using our website, you agree to the use of cookies in accordance with this policy unless you have disabled them.</p>
+                <p>We are committed to protecting your privacy and being transparent about our data practices. This policy supplements our Privacy Policy and explains specifically how we deploy cookies and similar tracking technologies.</p>
+            </div>
+            
+            <h2>1. What Are Cookies?</h2>
+            <p>Cookies are small text files that are placed on your device (computer, smartphone, tablet) when you visit a website. They are widely used to make websites work more efficiently and provide useful information to website owners.</p>
+            
+            <div class="cookie-types">
+                <div class="cookie-card">
+                    <div class="cookie-icon"><i class="fas fa-cookie-bite"></i></div>
+                    <h3>Session Cookies</h3>
+                    <p>Temporary cookies that remain in your browser's cookie file until you leave the site. These enable certain website functionality like maintaining your logged-in state as you navigate between pages. Session cookies don't collect information from your computer and are deleted when you close your browser.</p>
+                    <p>Example: Keeping items in your shopping cart during one browsing session.</p>
+                </div>
+                
+                <div class="cookie-card">
+                    <div class="cookie-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Persistent Cookies</h3>
+                    <p>These cookies remain on your device for a set period (usually between minutes to multiple years) unless manually deleted. They remember your preferences and actions across multiple visits, improving site functionality and user experience.</p>
+                    <p>Example: Remembering your language preference when you return to our site.</p>
+                </div>
+                
+                <div class="cookie-card">
+                    <div class="cookie-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>First-Party Cookies</h3>
+                    <p>Set by the website you're visiting directly. These are generally considered safer as they can only be read by that specific site. We use first-party cookies for authentication, security, and remembering your selections.</p>
+                    <p>Example: Remembering you've seen our cookie banner so it doesn't reappear.</p>
+                </div>
+            </div>
+            
+            <h2>2. How We Use Cookies</h2>
+            <p>ArborGlow uses cookies for several essential purposes to enhance your browsing experience:</p>
+            
+            <div class="policy-section">
+                <h3>2.1 Essential Website Operation</h3>
+                <ul>
+                    <li>Enable basic functions like page navigation and secure areas of the website</li>
+                    <li>Maintain your session and authentication status</li>
+                    <li>Prevent fraudulent use of login credentials</li>
+                    <li>Distribute site traffic across servers for optimal performance</li>
+                </ul>
+                
+                <h3>2.2 Performance and Analytics</h3>
+                <ul>
+                    <li>Track pages visited and interaction with site features</li>
+                    <li>Measure site loading speeds and performance</li>
+                    <li>Identify usage patterns to improve functionality</li>
+                    <li>Track error messages and technical issues</li>
+                </ul>
+                
+                <h3>2.3 Functionality and Personalization</h3>
+                <ul>
+                    <li>Remember your preferences and settings</li>
+                    <li>Enable social media integration</li>
+                    <li>Personalize content based on your usage history</li>
+                    <li>Remember location preferences for localized content</li>
+                </ul>
+                
+                <h3>2.4 Marketing and Advertising</h3>
+                <ul>
+                    <li>Measure effectiveness of promotional campaigns</li>
+                    <li>Enable targeted advertising based on interests</li>
+                    <li>Track conversions from external marketing</li>
+                    <li>Limit display frequency of ads</li>
+                </ul>
+            </div>
+            
+            <h2>3. Types of Cookies We Use</h2>
+            <p>Below is a detailed breakdown of the specific cookies we use on our website:</p>
+            
+            <h3>3.1 Essential Cookies</h3>
+            <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: rgba(139, 195, 74, 0.1);">
+                    <th style="padding: 12px; text-align: left; border: 1px solid var(--glow-green);">Cookie Name</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid var(--glow-green);">Purpose</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid var(--glow-green);">Duration</th>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">session_id</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">Maintain user session state</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">Session</td>
+                </tr>
+                <tr style="background-color: rgba(139, 195, 74, 0.05);">
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">auth_token</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">Authenticate logged-in users</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">24 hours</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">cookie_consent</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">Track cookie preferences</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">1 year</td>
+                </tr>
+            </table>
+            
+            <h3>3.2 Analytics Cookies</h3>
+            <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                <tr style="background-color: rgba(139, 195, 74, 0.1);">
+                    <th style="padding: 12px; text-align: left; border: 1px solid var(--glow-green);">Cookie Name</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid var(--glow-green);">Purpose</th>
+                    <th style="padding: 12px; text-align: left; border: 1px solid var(--glow-green);">Duration</th>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">_ga</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">Google Analytics user identification</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">2 years</td>
+                </tr>
+                <tr style="background-color: rgba(139, 195, 74, 0.05);">
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">_gid</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">Google Analytics session tracking</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">24 hours</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">_gat</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);">Google Analytics request throttling</td>
+                    <td style="padding: 12px; border: 1px solid var(--glow-green);";>1 minute</td>
+                </tr>
+            </table>
+            
+            <h2>4. Third-Party Cookies</h2>
+            <p>We partner with trusted third-party services that may also set cookies:</p>
+            
+            <div class="cookie-types">
+                <div class="cookie-card">
+                    <div class="cookie-icon"><i class="fab fa-google"></i></div>
+                    <h3>Google Analytics</h3>
+                    <p>Provides anonymous usage statistics to help us understand how visitors interact with our website. These cookies track pages visited, time spent on pages, and navigation paths. The data collected is aggregated and anonymized.</p>
+                    <p>You can opt-out of Google Analytics tracking via their browser add-on.</p>
+                </div>
+                
+                <div class="cookie-card">
+                    <div class="cookie-icon"><i class="fab fa-facebook"></i></div>
+                    <h3>Facebook Pixel</h3>
+                    <p>Helpers measure the effectiveness of our Facebook advertising by tracking actions users take after viewing ads. This allows us to show relevant ads to users who have visited our site and measure conversion rates.</p>
+                    <p>Facebook users can adjust ad preferences in their account settings.</p>
+                </div>
+            </div>
+            
+            <h2>5. Managing Cookies</h2>
+            <p>You have several options to control or limit how cookies are used on your devices:</p>
+            
+            <h3>5.1 Browser Settings</h3>
+            <p>Most web browsers allow you to manage cookie preferences through their settings. Typically, you can find these controls under "Options" or "Preferences" menus. Common browser settings allow you to:</p>
+            <ul>
+                <li>Delete all existing cookies</li>  
+                <li>Block all cookies (though this may break website functionality)</li>
+                <li>Allow only first-party cookies</li>
+                <li>Clear cookies when you close your browser</li>
+                <li>View and selectively delete specific cookies</li>
+            </ul>
+            
+            <div class="policy-section">
+                <h3>5.2 Industry Opt-Out Tools</h3>
+                <p>For advertising cookies specifically, several industry organizations provide opt-out mechanisms:</p>
+                <ul>
+                    <li>Digital Advertising Alliance (DAA): <a href="https://optout.aboutads.info/" style="color: var(--glow-green);">https://optout.aboutads.info/</a></li>
+                    <li>European Interactive Digital Advertising Alliance (EDAA): <a href="https://www.youronlinechoices.com/" style="color: var(--glow-green);">https://www.youronlinechoices.com/</a></li>
+                    <li>Network Advertising Initiative (NAI): <a href="https://optout.networkadvertising.org/" style="color: var(--glow-green);">https://optout.networkadvertising.org/</a></li>
+                </ul>
+                <p>These tools use cookies themselves to remember your opt-out preferences, so if you clear your cookies, you'll need to opt-out again.</p>
+            </div>
+            
+            <h2>6. Specific Browser Instructions</h2>
+            <p>Here's how to manage cookies in popular browsers:</p>
+            
+            <div class="cookie-types">
+                <div class="cookie-card">
+                    <h3>Google Chrome</h3>
+                    <ol>
+                        <li>Click the three-dot menu > Settings</li>
+                        <li>Select "Privacy and security" > "Cookies and other site data"</li>
+                        <li>Choose your preferred cookie settings</li>
+                        <li>To delete existing cookies: "See all cookies and site data"</li>
+                    </ol>
+                </div>
+                
+                <div class="cookie-card">
+                    <h3>Mozilla Firefox</h3>
+                    <ol>
+                        <li>Click the menu button > Options</li>
+                        <li>Select "Privacy & Security" panel</li>
+                        <li>Under "Cookies and Site Data," choose settings</li>
+                        <li>Click "Manage Data" to view/remove specific cookies</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <h2>7. Changes to This Policy</h2>
+            <p>We may update this Cookie Policy to reflect changes in our practices or legal requirements:</p>
+            
+            <ul>
+                <li>Material changes will be announced prominently on our site</li>
+                <li>Existing users will be prompted to review new cookie preferences</li>
+                <li>The "Last Updated" date at the top will reflect the most recent version</li>
+                <li>Archived versions of this policy are available upon request</li>
+            </ul>
+            
+            <h2>8. Contact Us</h2>
+            <p>For questions about this Cookie Policy or our data practices:</p>
+            <ul>
+                <li><strong>Email:</strong> privacy@arborglow.com</li>
+                <li><strong>Phone:</strong> (212) 555-1234</li>
+                <li><strong>Mail:</strong> ArborGlow, 238 1st Ave, New York, NY 10009</li>
+                <li><strong>Attn:</strong> Data Protection Officer</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 238 1st Ave, New York, NY 10009</li>
+                    <li><i class="fas fa-phone"></i> (212) 555-1234</li>
+                    <li><i class="fas fa-envelope"></i> info@arborglow.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 8AM-6PM</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal Information</h3>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                    <li><a href="#">Accessibility</a></li> </ul>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="copyright">
+            © 2023 ArborGlow Tree Care. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-text">
+            <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All," you consent to our use of cookies. You can manage your preferences in our <a href="cookies.html" style="color: var(--glow-green);">Cookie Policy</a>.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-accept" id="acceptCookies">Accept All</button>
+            <button class="cookie-btn cookie-decline" id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Banner Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const declineCookies = document.getElementById('declineCookies');
+            
+            // Check if cookie consent already given
+            if(document.cookie.indexOf('cookie_consent=true') > -1) {
+                cookieBanner.style.display = 'none';
+            } else if(document.cookie.indexOf('cookie_consent=false') > -1) {
+                cookieBanner.style.display = 'none';
+            }
+            
+            // Accept Cookies
+            acceptCookies.addEventListener('click', function() {
+                document.cookie = "cookie_consent=true; max-age=31536000; path=/; SameSite=Lax";
+                cookieBanner.style.display = 'none';
+                // Add code here to load additional tracking scripts if needed
+            });
+            
+            // Decline Cookies
+            declineCookies.addEventListener('click', function() {
+                document.cookie = "cookie_consent=false; max-age=31536000; path=/; SameSite=Lax";
+                cookieBanner.style.display = 'none';
+                // Add code here to disable non-essential cookies
+            });
+        });
+    </script>
+</body>
+</html>
